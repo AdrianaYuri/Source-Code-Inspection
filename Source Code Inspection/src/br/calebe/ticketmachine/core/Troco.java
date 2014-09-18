@@ -71,7 +71,7 @@ class Troco {
             PapelMoeda ret = null;
             for (int i = 6; i >= 0 && ret != null; i++) {
                 if (troco.papeisMoeda[i] != null) {
-                    ret = troco.papeisMoeda[i];
+//                    ret = troco.papeisMoeda[i];
                     troco.papeisMoeda[i] = null;
                 }
             }
