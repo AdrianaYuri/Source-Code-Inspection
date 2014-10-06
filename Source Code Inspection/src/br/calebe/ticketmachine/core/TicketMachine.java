@@ -22,16 +22,25 @@ public class TicketMachine {
     public void inserir(int quantia) throws PapelMoedaInvalidaException {
         boolean achou = false;
         for (int i = 0; i < papelMoeda.length && !achou; i++) {
-            if (papelMoeda[1] == quantia) {
+            if (papelMoeda[0] == quantia) {
                 achou = true;
-            }
-        }
-        if (!achou) {
+            }else if(papelMoeda[1]== quantia){
+                achou = true;
+            }else if (papelMoeda[2] == quantia){
+                achou = true;
+            }else if (papelMoeda[3]== quantia){
+                achou = true;
+            }else if (papelMoeda[4]== quantia){
+                achou = true;
+            }else if (papelMoeda[5]== quantia){
+                achou = true;
+            }else if (!achou) {
             throw new PapelMoedaInvalidaException();
         }
         this.saldo += quantia;
     }
-
+    }
+    
     public int getSaldo() {
         return saldo;
     }
